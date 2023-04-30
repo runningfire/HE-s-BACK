@@ -50,19 +50,17 @@ class GameLogic():
             and choise random word from it and returns it.
 
         """
-        try:
-            word_list = []
-            print('Генерирую слово...')
-            time.sleep(3)
-            with codecs.open(path, 'r', "utf-8") as file:
-                for word in file:
-                    word = file.readline()
-                    word_list.append(word[:-2])
-                rndword = random.choice(word_list)
-                return rndword
-        except FileNotFoundError:
-            print('Введите корректный путь')
-
+        
+        word_list = []
+        print('Генерирую слово...')
+        time.sleep(3)
+        with codecs.open(path, 'r', "utf-8") as file:
+            for word in file:
+                word = file.readline()
+                word_list.append(word[:-2])
+            rndword = random.choice(word_list)
+            return rndword
+        
     def getter_message(self):
         user_message = input(
             'Какая буква?\nЧтобы узнать сколько попыток осталось введите "1"\nЧтобы узнать какие буквы вы вводили нажмите "2"')
@@ -119,7 +117,7 @@ class GameLogic():
         return '' + (len(word)) * ' '
 
 
-if __name__ == '__main__':
+if __name__ == '__main__': #C:\1\9. Движемся дальше\9.9 Домашнее задание Виселица\WordsStockRus.txt
     MAIN_PATH = input('Введите путь к файлу со словами')
     Game = GameLogic(5)
     while Game.end_game is False:
