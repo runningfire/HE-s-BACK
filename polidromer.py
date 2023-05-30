@@ -27,8 +27,18 @@ def words_getter() -> list:
 
 
 def path_returner():
+    """
+
+
+    Returns Сохраняет введеный путь
+    -------
+    path0 : str
+
+
+    """
     path0 = input('Введите абсолютный путь, где файл')
     return path0
+
 
 def finder_v2(words: list, path: str):
     """
