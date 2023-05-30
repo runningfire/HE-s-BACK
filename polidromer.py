@@ -26,7 +26,11 @@ def words_getter() -> list:
     return words
 
 
-def finder_v2(words: list):
+def path_returner():
+    path0 = input('Введите абсолютный путь, где файл')
+    return path0
+
+def finder_v2(words: list, path: str):
     """
 
     Parameters
@@ -43,9 +47,6 @@ def finder_v2(words: list):
     None.
 
     """
-    text1 = r'C:\Users\Alex\OneDrive'
-    text2 = r'\Python Scripts\Python Projects\Пары палиндромов.txt'
-    path = text1 + text2
     with open(path, 'a+', encoding='cp1251') as file:
         file.seek(0, os.SEEK_END)
         if file.tell() == 0:
@@ -68,4 +69,4 @@ def finder_v2(words: list):
 
 
 if __name__ == '__main__':
-    finder_v2(words_getter())
+    finder_v2(words_getter(), path_returner())

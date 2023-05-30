@@ -4,10 +4,7 @@ Created on Tue May 30 07:19:06 2023
 
 @author: Alex
 """
-import sys
-path0 = r'C:\Users\Alex\OneDrive\Python Scripts'
-sys.path.insert(1, path0)
-from polidromer import words_getter
+from polidromer import words_getter, path_returner
 
 
 
@@ -15,7 +12,7 @@ from polidromer import words_getter
 class Handler:
     
     def __init__(self, path0):
-        self.path = path0 + r'\Python Projects\Пары палиндромов.txt'
+        self.path = path0
         
     
     def get_dict(self):
