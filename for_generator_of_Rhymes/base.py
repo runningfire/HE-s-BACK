@@ -10,7 +10,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 
-engine = create_engine("postgresql+psycopg2://postgres:tal88og7nk@localhost:5432/poems")
+engine = create_engine("postgresql+psycopg2://usernamedb:password@localhost:5432/poems")
 Session = sessionmaker(bind=engine)
 
 
